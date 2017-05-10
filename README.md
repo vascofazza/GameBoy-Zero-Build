@@ -1,4 +1,9 @@
 # Game-Boy-Zero-setup
+
+![Front](/images/gbzero.jpg)
+
+![Back](/images/gbzero-back.jpg)
+
 ## Introduction
 This project is a quick start configuration script for the Game Boy Zero Retropie build.
 It includes several features:
@@ -12,7 +17,9 @@ It includes several features:
 
 ## Hardware
 This simple schematic illustrates the **Graceful shutdown** mechanism.
+
 ![Graceful shutdown](/schematics/graceful_shutdown.png)
+
 For the **Battery Level* circuit check out [this project!](https://github.com/vascofazza/)
 
 ## Installation
