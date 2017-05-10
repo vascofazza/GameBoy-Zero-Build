@@ -1,5 +1,5 @@
 # Game-Boy-Zero-setup
-##Introduction
+## Introduction
 This project is a quick start configuration script for the Game Boy Zero Retropie build.
 It includes several features:
 
@@ -10,12 +10,12 @@ It includes several features:
 *  Python script for **Graceful shutdown** circuitry handling
 *  Python script for **Battery Level** meter
 
-##Hardware
+## Hardware
 This simple schematic illustrates the **Graceful shutdown** mechanism.
 ![Graceful shutdown](/schematics/graceful_shutdown.png)
 For the **Battery Level* circuit check out [this project!](https://github.com/vascofazza/)
 
-##Installation
+## Installation
 ```
 $ git clone https://github.com/vascofazza/GameBoy-Zero-Build.git
 $ cd GameBoy-Zero-Build/
