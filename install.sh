@@ -21,7 +21,7 @@ fi
 
 #Configurations
 echo "Installing configurations"
-sed -i -- 's/console=tty1/console=tty3/g' cmdline.txt #disable start/shutdown text
+sed -i -- 's/console=tty1/console=tty3/g' /boot/cmdline.txt #disable start/shutdown text
 cp configs/config.txt /boot/config.txt
 # Insert shutdown script into rc.local before final 'exit 0'
 sed -i "s/^exit 0/bash \/home\/pi\/scripts\/screen.sh \&\\nexit 0/g" /etc/rc.local >/dev/null
