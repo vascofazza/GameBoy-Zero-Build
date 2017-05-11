@@ -13,8 +13,8 @@ disable_overscan=1
 # goes off screen, and negative if there is too much border
 overscan_left=25
 overscan_right=25
-overscan_top=14
-overscan_bottom=25
+overscan_top=12
+overscan_bottom=28
 
 # uncomment to force a console size. By default it will be display's size minus
 # overscan.
@@ -65,4 +65,7 @@ dtoverlay=pwm-2chan,pin=18,func=2,pin2=13,func2=4
 display_rotate=2
 enable_uart=1
 start_x=0
+disable_splash=1
 display_rotate=2
+# invert led behavior
+dtparam=act_led_activelow=on
