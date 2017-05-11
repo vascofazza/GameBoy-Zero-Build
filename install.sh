@@ -31,12 +31,12 @@ echo -n " logo.nologo" >> /boot/cmdline.txt #disable start/shutdown text
 fi
 cp configs/config.txt /boot/config.txt
 # Insert shutdown script into rc.local before final 'exit 0'
-if ! grep -Fxq "bash \/home\/pi\/scripts\/screen.sh" /etc/rc.local
+if ! grep -Fxq "bash /home/pi/scripts/screen.sh &" /etc/rc.local
 then
     sed -i "s/^exit 0/bash \/home\/pi\/scripts\/screen.sh \&\\nexit 0/g" /etc/rc.local >/dev/null
 fi
 # Insert shutdown script into rc.local before final 'exit 0'
-if ! grep -Fxq "python \/home\/pi\/scripts\/shutdown.py" /etc/rc.local
+if ! grep -Fxq "python /home/pi/scripts/shutdown.py &" /etc/rc.local
 then
     sed -i "s/^exit 0/python \/home\/pi\/scripts\/shutdown.py \&\\nexit 0/g" /etc/rc.local >/dev/null
 fi
@@ -69,8 +69,8 @@ then
 mkdir gbzattinymonitor
 cd gbzattinymonitor/
 wget https://raw.githubusercontent.com/vascofazza/gbzattinymonitor/master/Install.sh
-chmod +x install.sh
-bash install.sh
+chmod +x Install.sh
+bash Install.sh
 fi
 
 #fixed version of pifba
