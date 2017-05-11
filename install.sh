@@ -39,6 +39,7 @@ apt-get --assume-yes install i2c-tools
 apt-get --assume-yes install python-smbus
 apt-get --assume-yes install python-pkg-resources
 apt-get --assume-yes install python-gpiozero
+apt-get --assume-yes install libpng12-dev
 
 #scripts
 echo "Installing scripts"

@@ -1,11 +1,14 @@
+import RPi.GPIO as GPIO
 import os
-from gpiozero import Button
-from signal import pause
+import sys
+import time
+
 
 powerGPIO = 4
-def shutdown():
-    os.system("sudo shutdown -h now")
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(powerGPIO, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
-shutdown_btn = Button(powerGPIO, pull_up=True, bounce_time=0.5)
-shutdown_btn.when_released = shutdown
-pause()
+while True:
+  time.sleep(1)
+  if GPIO.input(powerGPIO) is 1:
+    os.system("sudo shutdown -h now")
