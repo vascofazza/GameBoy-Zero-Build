@@ -11,9 +11,9 @@ disable_overscan=1
 
 # uncomment the following to adjust overscan. Use positive numbers if console
 # goes off screen, and negative if there is too much border
-overscan_left=27
-overscan_right=20
-overscan_top=6
+overscan_left=28
+overscan_right=22
+overscan_top=8
 overscan_bottom=30
 
 # uncomment to force a console size. By default it will be display's size minus
