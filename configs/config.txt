@@ -69,3 +69,4 @@ disable_splash=1
 display_rotate=2
 # invert led behavior
 dtparam=act_led_activelow=on
+#dtoverlay=i2c-rtc,ds3231

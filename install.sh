@@ -73,6 +73,20 @@ chmod +x Install.sh
 bash Install.sh
 fi
 
+#RTC module
+read -p "Do you want to install the RTC module configurations?" -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+sed -i -- 's/#dtoverlay=i2c-rtc,ds3231/dtoverlay=i2c-rtc,ds3231/g' /boot/cmdline.txt #enable rtc
+apt-get -y remove fake-hwclock
+update-rc.d -f fake-hwclock remove
+cp configs/hwclock-set /lib/udev/hwclock-set
+date
+hwclock -w
+hwclock -r
+fi
+
 #fixed version of pifba
 read -p "Do you want to download Lumberjack's pifba fixed version for NEOGEO?" -n 1 -r
 echo    # (optional) move to a new line

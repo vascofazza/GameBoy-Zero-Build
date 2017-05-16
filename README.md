@@ -13,10 +13,12 @@ It includes several features:
 *  Custom **config.txt** configured for **BW** screen
 *  Automatic screen rotation when connected through HDMI (the composite screen is mounted upside down)
 *  Python script for **Graceful shutdown** circuitry handling
-*  Python script for **Battery Level** meter (**NEW!**)
-*  Disable the initial boot logo (goes directly to the splashscreen without prompts) (**NEW!**)
-*  Invert the status led behaviour for power saving (the led is powered on sd activity) (**NEW!**)
-*  Downloads a fixed version of pifba for joypad compability (**NEW!**)
+*  Python script for **Battery Level** meter
+*  Disable the initial boot logo (goes directly to the splashscreen without prompts)
+*  Invert the status led behaviour for power saving (the led is powered on sd activity)
+*  Downloads a fixed version of pifba for joypad compability
+*  Added RTC (Real Time Clock) configuration for DS3231  (**NEW!**)
+*  Added **install_extra.sh** configuration script for super performances!  (**BETA**)
 
 ## Hardware
 This simple schematic illustrates the **Graceful shutdown** mechanism.
