@@ -10,5 +10,5 @@ GPIO.setup(powerGPIO, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 while True:
   time.sleep(1)
-  if GPIO.input(powerGPIO) is 1:
+  if GPIO.input(powerGPIO) is 0:
     os.system("sudo shutdown -h now")

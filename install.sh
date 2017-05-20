@@ -7,6 +7,7 @@ then
     killall wpa_supplicant
     cp configs/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf
     wpa_supplicant -Dnl80211 -iwlan0 -c/etc/wpa_supplicant/wpa_supplicant.conf
+    ifup -a
     sleep 5
 fi
 
@@ -85,6 +86,14 @@ cp configs/hwclock-set /lib/udev/hwclock-set
 date
 hwclock -w
 hwclock -r
+fi
+
+#autosave
+read -p "Do you want to enable autosave to disk?" -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+sed -i -- 's/# autosave_interval =/# autosave_interval = 60/g' /opt/retropie/configs/all/retroarch.cfg #enable autosave
 fi
 
 #fixed version of pifba
