@@ -82,7 +82,7 @@ then
 sed -i -- 's/#dtoverlay=i2c-rtc,ds3231/dtoverlay=i2c-rtc,ds3231/g' /boot/config.txt #enable rtc
 apt-get -y purge fake-hwclock
 update-rc.d -f fake-hwclock remove
-cp configs/hwclock-set /lib/udev/hwclock
+cp configs/hwclock-set /lib/udev/hwclock-set
 date
 hwclock -w
 hwclock -r
@@ -93,8 +93,7 @@ read -p "Do you want to enable autosave to disk?" -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-sed -i -- 's/# autosave_interval =/
-autosave_interval = 60/g' /opt/retropie/configs/all/retroarch.cfg #enable autosave
+sed -i -- 's/# autosave_interval =/autosave_interval = 60/g' /opt/retropie/configs/all/retroarch.cfg #enable autosave
 fi
 
 #fixed version of pifba
